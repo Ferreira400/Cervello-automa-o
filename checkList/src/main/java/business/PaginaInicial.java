@@ -3,6 +3,7 @@ package business;
 import utilitarios.*;
 
 import org.apache.bcel.generic.MethodObserver;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
@@ -25,11 +26,13 @@ public class PaginaInicial extends InicializadorBrowser {
 	
 	
 	
-	public PaginaInicial(ChromeDriver driver) {
+	public PaginaInicial(WebDriver driver) {
 		super(driver);
 		
 	}
 	
+
+
 	public void entrarModuloTMS (){
 				entrarModuloTMS.click();
 	}

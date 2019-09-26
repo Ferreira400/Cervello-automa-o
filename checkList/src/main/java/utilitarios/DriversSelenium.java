@@ -25,7 +25,7 @@ public class DriversSelenium {
    // @BeforeClass
     public void setUp(){	
    
-    	System.setProperty("webdriver.chrome.driver","C:\\Users\\10044\\Desktop\\Eclipse 2018\\chromedriver.exe");
+    	System.setProperty("webdriver.chrome.driver","C:\\Users\\10097\\git\\Cervello-Automacao\\chromedriver.exe");
     	
 	  //  System.getProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.Jdk14Logger");
 
