@@ -10,6 +10,15 @@ import cucumber.api.junit.Cucumber;
 		features = "Feature.Cucumber", glue = {"business"}
 		
 		)	
+		features = "BasedeConhecimento.feature"
+		,glue = {"business"}
+		)
+		features = "BasedeConhecimento.feature"
+		,glue = {"business"}
+		)
+		features = "BasedeConhecimento.feature"
+		,glue = {"business"}
+		)
 //@Suite.SuiteClasses({
 //	ExecutarFazerLogin.class,
 	//ExecutarCriarTopico.class,
