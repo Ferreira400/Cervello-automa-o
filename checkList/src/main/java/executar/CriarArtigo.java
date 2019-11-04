@@ -7,18 +7,13 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "Feature.Cucumber", glue = {"business"}
-		
+		features = "Feature.Cucumber",  glue = {"business"}
+
+			
 		)	
-		features = "BasedeConhecimento.feature"
-		,glue = {"business"}
-		)
-		features = "BasedeConhecimento.feature"
-		,glue = {"business"}
-		)
-		features = "BasedeConhecimento.feature"
-		,glue = {"business"}
-		)
+
+	
+
 //@Suite.SuiteClasses({
 //	ExecutarFazerLogin.class,
 	//ExecutarCriarTopico.class,

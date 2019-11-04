@@ -19,7 +19,7 @@ public class PaginaInicial extends InicializadorBrowser {
 	@FindBy(xpath="//a[@href='../BaseConhecimento/Home']")
 	private WebElement entrarModuloBasedeConhecimento;
 	
-	@FindBy(xpath="//h4[contains(text(), 'RelatÃ³rios')]")
+	@FindBy(xpath="//h4[contains(text(), 'Relatórios')]")
 	private WebElement entrarModuloRelatorio;
 	MetodoUtil metodos = new MetodoUtil(driver);
 	

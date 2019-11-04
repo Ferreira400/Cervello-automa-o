@@ -44,10 +44,16 @@ public class FazerLogin extends DriversSelenium {
 	    	metodos.tempo(3);
 	    	login.escolherUsuario.submit();
 	    	
-	    	metodos.tempo(3);
-	 super.sair();
+	    	//metodos.tempo(3);
+	 //super.sair();
 	    }
 
+	    @When("^eu acessar  base de conhecimento deve ser apresentado o link para criação de tópico$")
+		public void eu_acessar_base_de_conhecimento_deve_ser_apresentado_o_link_para_criação_de_tópico() throws Throwable {
+			WebElement Mylink = driver.findElement(By.className("fal fa-alicorn"));
+			Mylink.click();
+		   
+		}
 	    
 	    
 	    
