@@ -65,6 +65,7 @@ public class ExcluirArtigoTest {
     Thread.sleep(8000);
     driver.findElement(By.cssSelector(".laptop--18:nth-child(4)")).click();
     Thread.sleep(8000);
+    
    /* driver.findElement(By.cssSelector(".col--36:nth-child(1) img")).click();
     Thread.sleep(8000);
     driver.findElement(By.cssSelector(".fa-edit")).click();
@@ -75,7 +76,11 @@ public class ExcluirArtigoTest {
     */
   //*[@id="dvPjaxBs_Render"]/div/ul/li[2]
     
-    driver.findElement(By.xpath("//*[@id=\"dvPjaxBs_Render\"]/div/ul/li[2]/div/a")).click();
+    for (int i = 0; i < 15; i++) {
+    	 Thread.sleep(8000);
+    	driver.findElement(By.cssSelector("#dvPjaxBs_Render > div > ul > li:nth-child(-n+7) > div > a > img")).click();
+    	//#dvPjaxBs_Render > div > ul > li:nth-child(1) > div > a > img
+    //driver.findElement(By.xpath("//*[@id=\"dvPjaxBs_Render\"]/div/ul/li[1]/div/a")).click();
     Thread.sleep(8000);
     driver.findElement(By.cssSelector(".fa-edit")).click();
     Thread.sleep(8000);
@@ -84,6 +89,12 @@ public class ExcluirArtigoTest {
     assertThat(driver.switchTo().alert().getText(), is("Arquivo excluido com sucesso."));
    
     driver.switchTo().alert().accept();
+    Thread.sleep(8000);
+    driver.findElement(By.cssSelector(".laptop--18:nth-child(4)")).click();
+    Thread.sleep(8000);
+    }
+   
+    /*
     Thread.sleep(8000);
     driver.findElement(By.xpath("//*[@id=\"dvPjaxBs_Render\"]/div/ul/li[3]/div/a")).click();
     Thread.sleep(8000);
@@ -139,6 +150,8 @@ public class ExcluirArtigoTest {
     Thread.sleep(8000);
     assertThat(driver.switchTo().alert().getText(), is("Arquivo excluido com sucesso."));
     driver.switchTo().alert().accept();
+    
+    */
   }
 
   @Test
@@ -156,16 +169,21 @@ public class ExcluirArtigoTest {
     vars.put("win6375", waitForWindow(2000));
     driver.switchTo().window(vars.get("win6375").toString());
     Thread.sleep(8000);
-    driver.findElement(By.cssSelector(".laptop--18:nth-child(4)")).click();
+    
+    for (int i = 0; i < 12; i++) {
+    
+    driver.findElement(By.cssSelector(".laptop--18:nth-child(-n+12)")).click();
     Thread.sleep(8000);
-    driver.findElement(By.cssSelector(".col--36:nth-child(1) img")).click();
+    driver.findElement(By.cssSelector(".col--36:nth-child(-n+12) img")).click();
     Thread.sleep(8000);
     driver.findElement(By.cssSelector(".fa-edit")).click();
     Thread.sleep(8000);
     driver.findElement(By.id("lnkExcluir")).click();
     Thread.sleep(8000);
     assertThat(driver.switchTo().alert().getText(), is("Arquivo excluido com sucesso."));
-  }
+    Thread.sleep(8000);
+    }
+    }
 
 
 }
