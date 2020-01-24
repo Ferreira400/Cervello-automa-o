@@ -1,4 +1,4 @@
-package executar;
+package TMS;
 
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
@@ -89,13 +89,12 @@ public class ArtigoCompletoTest {
 	public void /* testejepe */ testeTakeScreenShot1() throws InterruptedException, IOException {
 
 		driver = new ChromeDriver();
-		//driver.get("http://10.254.16.80/01092019-v2018/");
 		driver.get("http://10.254.16.80/17042019-v2018/");
 		driver.manage().window().setSize(new Dimension(1680, 1010));
 		takeScreenShot1();
 		driver.findElement(By.id("login")).sendKeys("cervello");
 		takeScreenShot1();
-		driver.findElement(By.id("senha")).sendKeys("cervello02");
+		driver.findElement(By.id("senha")).sendKeys("cervello01");
 		takeScreenShot1();
 		driver.findElement(By.xpath("//*[@id=\"frmLogin\"]/button")).click();
 		takeScreenShot1();
@@ -104,7 +103,7 @@ public class ArtigoCompletoTest {
 		takeScreenShot1();
 		{
 			WebElement element = driver.findElement(
-					By.cssSelector(".col--36:nth-child(4) > .cards__item--portal .cards__legenda--portal"));
+					By.cssSelector(".col--36:nth-child(2) > .cards__item--portal .cards__legenda--portal"));
 			Actions builder = new Actions(driver);
 			builder.moveToElement(element).perform();
 		}
@@ -153,7 +152,8 @@ public class ArtigoCompletoTest {
 		// driver.findElement(By.id("lnkSelIcone")).click();
 		driver.findElement(By.xpath("//*[@id=\"frmSalvarTopico\"]/div/section/div[2]/div[4]/a/span")).click();
 		takeScreenShot1();
-		Thread.sleep(3000);
+		
+
 
 		driver.findElement(By.xpath("//*[@id=\"modalImagem\"]/div/div/a")).click();
 		takeScreenShot1();
@@ -168,13 +168,12 @@ public class ArtigoCompletoTest {
 	}
 
 	@Test
-	public void /* excluirComentario */ testeTakeScreenShot2() throws InterruptedException {
+	public void /* excluirComentario */ teste3() throws InterruptedException {
 		driver = new ChromeDriver();
 		driver.get("http://10.254.16.80/17042019-v2018/");
-		//driver.get("http://10.254.16.80/01092019-v2018/");
 		driver.manage().window().setSize(new Dimension(1680, 1010));
 		driver.findElement(By.id("login")).sendKeys("cervello");
-		driver.findElement(By.id("senha")).sendKeys("cervello02");
+		driver.findElement(By.id("senha")).sendKeys("cervello01");
 		driver.findElement(By.xpath("//*[@id=\"frmLogin\"]/button")).click();
 		// Util.tempo(4);
 		driver.findElement(By.xpath("//*[@id=\"frmLogin\"]/button")).click();
@@ -195,8 +194,7 @@ public class ArtigoCompletoTest {
 		Thread.sleep(3000);
 		driver.findElement(By.cssSelector(".base__edita--previa")).click();
 		Thread.sleep(3000);
-		//driver.findElement(By.cssSelector("body")).click();
-		driver.findElement(By.cssSelector("body")).sendKeys("Melhoria10");
+		driver.findElement(By.cssSelector("body")).click();
 		Thread.sleep(3000);
 		driver.switchTo().defaultContent();
 		Thread.sleep(3000);
@@ -231,7 +229,7 @@ public class ArtigoCompletoTest {
 		Thread.sleep(3000);
 		
 		
-		for (int i = 0; i < 13; i++) {
+		for (int i = 0; i < 9; i++) {
 
 			Thread.sleep(8000);
 			
@@ -250,42 +248,75 @@ public class ArtigoCompletoTest {
 		}
 			
 		
+		/*
 		
-		//Funcionando a função de aprovação de comentario
+		driver.findElement(By.id("txtComentario")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.id("txtComentario")).sendKeys("fazendo teste 1");
+		Thread.sleep(3000);
+		driver.findElement(By.id("btnComentar")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.id("txtComentario")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.id("txtComentario")).sendKeys("fazendo teste 2");
+		Thread.sleep(3000);
+		driver.findElement(By.id("btnComentar")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.id("txtComentario")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.id("txtComentario")).sendKeys("fazendo teste 3");
+		Thread.sleep(3000);
+		driver.findElement(By.id("btnComentar")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.id("txtComentario")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.id("txtComentario")).sendKeys("fazendo teste 4");
+		Thread.sleep(3000);
+		driver.findElement(By.id("btnComentar")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.id("txtComentario")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.id("txtComentario")).sendKeys("fazendo teste 5");
+		Thread.sleep(3000);
+		driver.findElement(By.id("btnComentar")).click();
+		Thread.sleep(3000);
 		
-		for (int i = 0; i < 6; i++) {
+		
+		*/
+		
+		
+		/*
+		
+		Funcionando a função de aprovação de comentario
+		
+		for (int i = 0; i < 3; i++) {
 			Thread.sleep(6000);
 	//	driver.findElement(By.cssSelector(".base__comentario--portal:nth-child(1) .acao--simples")).click();
 		Thread.sleep(6000);
 	//	driver.findElement(By.cssSelector(".base__comentario--portal:nth-child(2) .acao--simples")).click();
 		Thread.sleep(6000);
-	//	driver.findElement(By.cssSelector("#dvComentario > ol > li:nth-child(-n+3) > div > div.linha > a.acao--simples.lnkAprovarComentario")).click();
-		
-		driver.findElement(By.cssSelector("#dvComentario > ol > li:nth-child(2n+1) > div > div.linha > a.acao--simples.lnkAprovarComentario")).click();
+		driver.findElement(By.cssSelector("#dvComentario > ol > li:nth-child(-n+3) > div > div.linha > a.acao--simples.lnkAprovarComentario")).click();
 		Thread.sleep(6000);
 		
 	
 		}
 		
+		*/
 		
-	
 		/*
-		
 		for (int i = 0; i < 3; i++) {
 			Thread.sleep(6000);
-			driver.findElement(By.cssSelector(".base__comentario--portal:nth-child(3n+1) .acao--cancela")).click();
+			driver.findElement(By.cssSelector(".base__comentario--portal:nth-child(-n+3) .acao--cancela")).click();
 			Thread.sleep(6000);
-		//driver.findElement(By.id("txtMotivo")).click();
+		driver.findElement(By.id("txtMotivo")).click();
 		Thread.sleep(6000);
 		driver.findElement(By.id("txtMotivo")).sendKeys("ok");
 		Thread.sleep(6000);
 		driver.findElement(By.id("btnEnviarMensagemReprovacao")).click();
-		
 		Thread.sleep(6000);
-		
 		}
 		
-	*/
+		*/
 		for (int i = 0; i < 9; i++) {
 	    	
 			Thread.sleep(6000);
@@ -297,19 +328,23 @@ public class ArtigoCompletoTest {
 	    Thread.sleep(6000);
 
 	    }
+		/*
 		
-		// "Fazer um download de um PDF"
-		
-		
-		   Thread.sleep(20000);
-		   
-		     driver.findElement(By.cssSelector(".fa-file-pdf")).click();
-		     
-		     Thread.sleep(8000);
-		    
+		driver.findElement(By.cssSelector(".base__comentario--portal:nth-child(1) .fas")).click();
+		Thread.sleep(3000);
+		assertThat(driver.switchTo().alert().getText(), is("Deseja realmente excluir este comentário ?"));
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		Thread.sleep(3000);
 		
 		
-		
+		driver.findElement(By.cssSelector(".base__comentario--portal:nth-child(2) .fas")).click();
+		Thread.sleep(3000);
+		assertThat(driver.switchTo().alert().getText(), is("Deseja realmente excluir este comentário ?"));
+		Thread.sleep(3000);
+		driver.switchTo().alert().accept();
+		Thread.sleep(3000);
+		*/
 		
 		
 		driver.findElement(By.xpath("//*[@id=\"dvPjaxBs_Render\"]/div/div[1]/a[1]")).click();
@@ -343,13 +378,12 @@ public class ArtigoCompletoTest {
 	}
 
 	@Test
-	public void /* editorArtigo() */ testeTakeScreenShot3() throws InterruptedException {
+	public void /* editorArtigo() */ teste4() throws InterruptedException {
 		driver = new ChromeDriver();
-		//driver.get("http://10.254.16.80/01092019-v2018/");
 		driver.get("http://10.254.16.80/17042019-v2018/");
 		driver.manage().window().setSize(new Dimension(1680, 1010));
 		driver.findElement(By.id("login")).sendKeys("cervello");
-		driver.findElement(By.id("senha")).sendKeys("cervello02");
+		driver.findElement(By.id("senha")).sendKeys("cervello01");
 		driver.findElement(By.xpath("//*[@id=\"frmLogin\"]/button")).click();
 		// Util.tempo(4);
 		driver.findElement(By.xpath("//*[@id=\"frmLogin\"]/button")).click();
@@ -399,58 +433,6 @@ public class ArtigoCompletoTest {
 
 	}
 
-	
-	@Test
-	public void /* excluirComentario */ testeTakeScreenShot4() throws InterruptedException {
-		driver = new ChromeDriver();
-		driver.get("http://10.254.16.80/17042019-v2018/");
-		//driver.get("http://10.254.16.80/01092019-v2018/");
-		driver.manage().window().setSize(new Dimension(1680, 1010));
-		driver.findElement(By.id("login")).sendKeys("cervello");
-		driver.findElement(By.id("senha")).sendKeys("cervello02");
-		driver.findElement(By.xpath("//*[@id=\"frmLogin\"]/button")).click();
-		driver.findElement(By.xpath("//*[@id=\"frmLogin\"]/button")).click();
-		driver.manage().window().setSize(new Dimension(1680, 1010));
-		vars.put("window_handles", driver.getWindowHandles());
-		Thread.sleep(8000);
-		driver.findElement(By.xpath("//*[@id=\"portal\"]/main/div[1]/section/div[2]/ul/li[4]/div/a/i")).click();
-		Thread.sleep(8000);
-		vars.put("win7707", waitForWindow(2000));
-		driver.switchTo().window(vars.get("win7707").toString());
-		Thread.sleep(3000);
-		driver.findElement(By.cssSelector(".desktop--9:nth-child(1)")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.id("txtTitulo")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.id("txtTitulo")).sendKeys("Melhoria10");
-		Thread.sleep(3000);
-		driver.findElement(By.cssSelector(".base__edita--previa")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.cssSelector("body")).sendKeys("Melhoria10");
-		Thread.sleep(3000);
-		driver.switchTo().defaultContent();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//body")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.id("btnSalvarEditor")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.id("txtDescricao")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.id("txtDescricao")).sendKeys("Melhoria10");
-		Thread.sleep(3000);
-		driver.findElement(By.id("txtPalavraChave")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.id("txtPalavraChave")).sendKeys("Melhoria20");
-
-		driver.findElement(By.xpath("//option[. = 'Junit8']")).click();
-		// driver.findElement(By.xpath("//option[5]")).click();
-		Thread.sleep(3000);
-
-		Thread.sleep(3000);
-		driver.findElement(By.id("btnSalvar")).click();
-	
-	}
-	
 	public void takeScreenShot1() throws InterruptedException, IOException {
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String fileName = UUID.randomUUID().toString();

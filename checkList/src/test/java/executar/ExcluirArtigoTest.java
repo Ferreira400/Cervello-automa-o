@@ -53,7 +53,7 @@ public class ExcluirArtigoTest {
 	  driver.get("http://10.254.16.80/17042019-v2018/");
 	  driver.manage().window().setSize(new Dimension(1680, 1010));
 	    driver.findElement(By.id("login")).sendKeys("cervello");
-	    driver.findElement(By.id("senha")).sendKeys("cervello01");
+	    driver.findElement(By.id("senha")).sendKeys("cervello02");
 	    driver.findElement(By.xpath("//*[@id=\"frmLogin\"]/button")).click();
 	   // Util.tempo(4);
 	    driver.findElement(By.xpath("//*[@id=\"frmLogin\"]/button")).click();
@@ -63,7 +63,7 @@ public class ExcluirArtigoTest {
     vars.put("win6375", waitForWindow(2000));
     driver.switchTo().window(vars.get("win6375").toString());
     Thread.sleep(8000);
-    driver.findElement(By.cssSelector(".laptop--18:nth-child(4)")).click();
+    driver.findElement(By.cssSelector(".laptop--18:nth-child(2)")).click();
     Thread.sleep(8000);
     
    /* driver.findElement(By.cssSelector(".col--36:nth-child(1) img")).click();
@@ -159,7 +159,7 @@ public class ExcluirArtigoTest {
 	  driver.get("http://10.254.16.80/17042019-v2018/");
 	  driver.manage().window().setSize(new Dimension(1680, 1010));
 	    driver.findElement(By.id("login")).sendKeys("cervello");
-	    driver.findElement(By.id("senha")).sendKeys("cervello01");
+	    driver.findElement(By.id("senha")).sendKeys("cervello02");
 	    driver.findElement(By.xpath("//*[@id=\"frmLogin\"]/button")).click();
 	   // Util.tempo(4);
 	    driver.findElement(By.xpath("//*[@id=\"frmLogin\"]/button")).click();
@@ -170,9 +170,9 @@ public class ExcluirArtigoTest {
     driver.switchTo().window(vars.get("win6375").toString());
     Thread.sleep(8000);
     
-    for (int i = 0; i < 12; i++) {
+    for (int i = 0; i < 6; i++) {
     
-    driver.findElement(By.cssSelector(".laptop--18:nth-child(-n+12)")).click();
+    driver.findElement(By.cssSelector(".laptop--18:nth-child(-n+2)")).click();
     Thread.sleep(8000);
     driver.findElement(By.cssSelector(".col--36:nth-child(-n+12) img")).click();
     Thread.sleep(8000);
